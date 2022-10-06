@@ -11,8 +11,7 @@ const NavBar = () => {
             <div className="dropdown">
                 <label tabIndex={0} className="btn m-1">Menú</label>
                 <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><Link to={'/ram'}>Rick and Morty</Link></li>
-                    <li><Link to={'/hpapi'}>Harry Potter</Link></li>
+                    <li><Link to={'/PZT'}>Products</Link></li>
                 </ul>
             </div>
             <CartWidget /> 
