@@ -21,14 +21,14 @@ const PlatziContainer = () => {
     return (
         <div>
             {items.map(i =>
-                <div className="ml-7 inline-flex card card-compact w-96 bg-base-100 shadow-xl">
+                <div className="mt-5 ml-5 outline inline-flex card card-compact w-96 bg-base-100 shadow-xl">
                 <figure><img src={i.images} alt={i.title} /></figure>
                 <div className="card-body">
                   <h1 className="card-title">{i.title}</h1>
-                  <strong>Price: ${i.price}</strong>
-                  <p>{i.description}</p>
+                  <strong className='text-right text-xl'>Price: ${i.price}</strong>
+                  <p >{i.description}</p>
                   <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <button className="btn btn-outline btn-error">Buy Now</button>
                   </div>
                 </div>
               </div>)}
