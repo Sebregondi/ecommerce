@@ -8,7 +8,6 @@ const ItemList = () => {
 
 useEffect(() => {
   getProducts().then ( response => {
-    console.log(response);
     setItems (response) 
   })
 }, [])
