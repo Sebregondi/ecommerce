@@ -31,7 +31,7 @@ function App() {
         <Route path='/' element={<ItemListContainer />} />
         <Route path='/item' element={<ItemCard />} />
         <Route path='/item/:id' element={<ItemDetail />} />
-        <Route path='/list' element={<ItemList />} />
+        <Route path='/category/:id' element={<ItemList />} />
         <Route path='/count' element={<ItemCount />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
