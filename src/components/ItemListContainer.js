@@ -20,7 +20,6 @@ const ItemListContainer = () => {
     })
   }
 
-
   return (
     <div>
         {items.map(i =>
