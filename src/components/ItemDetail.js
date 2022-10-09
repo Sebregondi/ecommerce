@@ -24,17 +24,20 @@ const ItemDetail = () => {
 
     return (
         <div className="card items-center w-96 bg-base-100 shadow-xl">
-  <figure className="w-2/3 px-5 pt-10">
-    <img  src={item.img} alt="Shoes" className="items-center rounded-xl" />
-  </figure>
-  <div className="card-body items-center text-center">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
+            <figure className="w-2/3 px-5">
+                <img src={item.img} alt={item.nombre} className="items-center rounded-xl" />
+            </figure>
+            <div className="card-body items-center text-center">
+                <h2 className="card-title">${item.precio}</h2>
+                <p>Título: {item.nombre}</p>
+                <p>Autor: {item.autor}</p>
+                <p>Género: {item.genero}</p>
+                <p>Págs.: {item.pags}</p>
+                <div className="card-actions">
+                    <button className="btn btn-primary">¡Comprar!</button>
+                </div>
+            </div>
+        </div>
         // <div className="card card-side bg-base-50 shadow-xl">
         //     <figure className='w-2/4'><img className='w-1/4' src={item.img} alt={item.nombre} /></figure>
         //     <div className="card-body">
