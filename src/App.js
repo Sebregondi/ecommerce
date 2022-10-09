@@ -1,10 +1,11 @@
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PlatziContainer from './API/PlatziContainer';
 import ItemCount from './components/ItemCount';
 import ItemList from './components/ItemList';
+import ItemDetail from './components/ItemDetail';
 
 function PageNotFound() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Routes>
         <Route path='/' element={<ItemCount />} />
         <Route path='/list' element={<ItemList />} />
+        <Route path='/item/:id' element={<ItemDetail />} />
         <Route path='*' element={<PageNotFound />} />
         <Route path='/PZT' element={<PlatziContainer />} />
       </Routes>
