@@ -27,7 +27,9 @@ const ItemListContainer = () => {
             <figure><img src={i.img} alt={i.nombre} /></figure>
             <div className="card-body">
               <div className="card-actions justify-end">
+                <Link to={`/item/${i.id}`}>
                   <button className="btn btn-outline btn-error">+ info</button>
+                </Link>
               </div>
             </div>
           </div>)}
