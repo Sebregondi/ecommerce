@@ -10,12 +10,12 @@ const CartWidget = () => {
                     <span className="badge badge-sm indicator-item">0</span>
                 </div>
             </label>
-            <div tabIndex={0} className="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
+            <div tabIndex={0} className="mt-3 card card-compact dropdown-content w-52 bg-error shadow">
                 <div className="card-body">
                     <span className="font-bold text-lg">0 Items</span>
-                    <span className="text-info">Subtotal: $0</span>
+                    <span className="text-info text-black">Subtotal: $0</span>
                     <div className="card-actions">
-                        <button className="btn btn-primary btn-block">View cart</button>
+                        <button className="btn btn-block bg-error">View cart</button>
                     </div>
                 </div>
             </div>
