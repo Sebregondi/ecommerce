@@ -16,12 +16,11 @@ const PlatziContainer = () => {
             })
             .catch(err => { console.log(err) })
     }
-
-
+  
     return (
         <div>
             {items.map(i =>
-                <div className="mt-5 ml-5 outline inline-flex card card-compact w-96 bg-base-100 shadow-xl">
+                <div key={i.id} className="mt-5 ml-5 outline inline-flex card card-compact w-96 bg-base-100 shadow-xl">
                 <figure><img src={i.images} alt={i.title} /></figure>
                 <div className="card-body">
                   <h1 className="card-title">{i.title}</h1>

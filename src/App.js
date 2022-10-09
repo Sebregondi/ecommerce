@@ -1,9 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
-import ClickTracker from './components/ClickTracker';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PlatziContainer from './API/PlatziContainer';
+import ItemCount from './components/ItemCount';
 
 function PageNotFound() {
   return (
@@ -25,7 +25,7 @@ function App() {
     <BrowserRouter>
       <NavBar/>
       <Routes>
-        <Route path='/' element={<ClickTracker />} />
+        <Route path='/' element={<ItemCount />} />
         <Route path='*' element={<PageNotFound />} />
         <Route path='/PZT' element={<PlatziContainer />} />
       </Routes>
