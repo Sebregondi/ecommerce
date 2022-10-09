@@ -22,7 +22,7 @@ const getProducts = () => {
 
   return (
     <>
-      <div>ItemList</div>
+      <div className='m-8'>ItemList</div>
       {items.map( i=> <ItemCard key={i.id} {...i}/>)}
     </>
   )
