@@ -12,7 +12,6 @@ const NavBar = () => {
                 <label tabIndex={0} className="btn btn-sm m-1">Menu</label>
                 <ul tabIndex={0} className="dropdown-content menu p-2 outline shadow bg-base-100 rounded-box w-52">
                     <li><Link to={'/'}>ItemListContainer</Link></li>
-                    <li><Link to={'/item'}>ItemCard</Link></li>
                     <li><Link to={'/list'}>ItemList</Link></li>
                     <li><Link to={'/count'}>ItemCount</Link></li>
                 </ul>

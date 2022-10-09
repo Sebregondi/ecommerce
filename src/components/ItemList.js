@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ItemCard from './ItemCard'
 import { products } from './products'
 
-const ItermList = () => {
+const ItemList = () => {
 
   const [items, setItems] = useState([])
 
@@ -29,4 +29,4 @@ const getProducts = () => {
   )
 }
 
-export default ItermList
+export default ItemList

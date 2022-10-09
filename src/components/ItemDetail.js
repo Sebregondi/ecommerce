@@ -23,8 +23,8 @@ const ItemDetail = () => {
     }
 
     return (
-        <div className="card card-side bg-base-100 shadow-xl">
-            <figure><img src={item.img} alt={item.nombre} /></figure>
+        <div className="card card-side bg-base-50 shadow-xl">
+            <figure><img className='min-w-0' src={item.img} alt={item.nombre} /></figure>
             <div className="card-body">
                 <h2 className="card-title">{item.nombre}</h2>
                 <strong>{item.precio}</strong>
@@ -36,13 +36,6 @@ const ItemDetail = () => {
                 </div>
             </div>
         </div>
-        // <div className='m-8'>
-        //     <div>{item.nombre}</div>
-        //     <div>{item.autor}</div>
-        //     <div>${item.precio}</div>
-        //     <div>{item.genero}</div>
-        //     <div>{item.pags}</div>
-        // </div>
     )
 }
 

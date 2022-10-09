@@ -5,7 +5,7 @@ const products = [
     pags: "160 páginas",
     precio: 3649,
     genero: "Cuento",
-    img: "/public/img/ElAleph.jpg"
+    img: "/img/ElAleph.jpg"
     },
 
     {id: 2,
@@ -14,7 +14,7 @@ const products = [
     pags: "180 páginas",
     precio: 3349,
     genero: "Cuento",
-    img: "/public/img/Ficciones.jpg",
+    img: "/img/Ficciones.jpg",
     },
 
     {id: 3,
@@ -23,7 +23,7 @@ const products = [
     pags: "250 páginas",
     precio: 3999,
     genero: "Ensayo",
-    img: "/public/img/Inquisiciones.jpg",
+    img: "/img/Inquisiciones.jpg",
     },
 
     {id: 4,
@@ -32,7 +32,7 @@ const products = [
     pags: "170 páginas",
     precio: 2499,
     genero: "Ensayo",
-    img: "/public/img/HistoriaEternidad.jpg",
+    img: "/img/HistoriaEternidad.jpg",
     },
 
     {id: 5,
@@ -41,7 +41,7 @@ const products = [
     pags: "120 páginas",
     precio: 2999,
     genero: "Poesía",
-    img: "/public/img/RosaProfunda.jpg",
+    img: "/img/RosaProfunda.jpg",
     },
 
     {id: 6,
@@ -50,7 +50,7 @@ const products = [
     pags: "130 páginas",
     precio: 2999,
     genero: "Poesía",
-    img: "/public/img/LaCifra.jpg",
+    img: "/img/LaCifra.jpg",
     }
 ]
 
