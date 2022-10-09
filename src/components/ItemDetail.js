@@ -26,7 +26,7 @@ const ItemDetail = () => {
     <div className='m-8'>
         <div>{item.nombre}</div>
         <div>{item.autor}</div>
-        <div>{item.precio}</div>
+        <div>${item.precio}</div>
         <div>{item.genero}</div>
         <div>{item.pags}</div>
     </div>
