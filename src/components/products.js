@@ -1,4 +1,4 @@
-export const products = [
+const products = [
     {id: 1,
     nombre: "El aleph",
     autor: "Jorge Luis Borges",
@@ -51,5 +51,7 @@ export const products = [
     precio: 2999,
     genero: "Poesía",
     img: "/public/img/LaCifra.jpg",
-    },
+    }
 ]
+
+export {products}

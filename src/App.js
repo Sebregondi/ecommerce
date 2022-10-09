@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PlatziContainer from './API/PlatziContainer';
 import ItemCount from './components/ItemCount';
+import ItemList from './components/ItemList';
 
 function PageNotFound() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <NavBar/>
       <Routes>
         <Route path='/' element={<ItemCount />} />
+        <Route path='/list' element={<ItemList />} />
         <Route path='*' element={<PageNotFound />} />
         <Route path='/PZT' element={<PlatziContainer />} />
       </Routes>
