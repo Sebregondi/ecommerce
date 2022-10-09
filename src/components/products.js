@@ -5,7 +5,7 @@ const products = [
     pags: "160 páginas",
     precio: 3649,
     genero: "Cuento",
-    img: "/public/img/ElAleph.jpg",
+    img: "/public/img/ElAleph.jpg"
     },
 
     {id: 2,
