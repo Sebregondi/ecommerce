@@ -23,7 +23,7 @@ const ItemDetail = () => {
     }
 
     return (
-        <div className="card items-center w-96 bg-base-100 shadow-xl">
+        <div className="card outline outline-2 outline-red-400 items-center w-96 bg-base-100 shadow-xl">
             <figure className="w-2/3 px-5">
                 <img src={item.img} alt={item.nombre} className="items-center rounded-xl" />
             </figure>
@@ -34,7 +34,7 @@ const ItemDetail = () => {
                 <p>Género: {item.genero}</p>
                 <p>Págs.: {item.pags}</p>
                 <div className="card-actions">
-                    <button className="btn btn-primary">¡Comprar!</button>
+                    <button className="btn btn-error">¡Comprar!</button>
                 </div>
             </div>
         </div>
