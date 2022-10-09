@@ -23,11 +23,9 @@ const ItemListContainer = () => {
   return (
     <div>
         {items.map(i =>
-            <div key={i.id} className="mt-5 ml-5 outline inline-flex card card-compact w-96 bg-base-100 shadow-xl">
+            <div key={i.id} className="mt-5 ml-5 outline outline-2 outline-red-400 inline-flex card card-compact w-96 bg-base-100 shadow-xl">
             <figure><img src={i.img} alt={i.nombre} /></figure>
             <div className="card-body">
-              <h1 className="card-title">{i.nombre}</h1>
-              <p className='text-left text-xl'>{i.autor}</p>
               <div className="card-actions justify-end">
                   <button className="btn btn-outline btn-error">+ info</button>
               </div>
