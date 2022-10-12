@@ -7,7 +7,7 @@ import ItemList from './components/ItemList';
 import ItemDetail from './components/ItemDetail';
 import ItemListContainer from './components/ItemListContainer';
 import ItemCard from './components/ItemCard';
-import CatList from './components/CatList';
+import Categories from './components/Categories';
 
 function PageNotFound() {
   return (
@@ -34,7 +34,7 @@ function App() {
         <Route path='/item/:id' element={<ItemDetail />} />
         <Route path='/category/:id' element={<ItemList />} />
         <Route path='/count' element={<ItemCount />} />
-        <Route path='/cat' element={<CatList />} />
+        <Route path='/cat/:id' element={<Categories />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
