@@ -36,7 +36,7 @@ const ItemDetail = () => {
                 <p>Descripción: {item.sintesis}</p>
                 
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Add to cart</button>
+                    <button className="btn btn-primary">Agregar al carrito</button>
                 </div>
             </div>
         </div>

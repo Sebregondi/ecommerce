@@ -22,7 +22,7 @@ const ItemList = () => {
 
   return (
     <>
-      <div className='m-8'><h1 className='text-xl font-bold'>Categories</h1></div>
+      <div className='m-8'><h1 className='text-xl font-bold'>Listado de libros</h1></div>
       {items.map(i => <ItemCard key={i.id} {...i} />)}
     </>
   )
