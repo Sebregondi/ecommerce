@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { products } from "./products";
+import CatCard from "./CatCard";
 
 const Categories = () => {
 
@@ -26,7 +27,7 @@ const Categories = () => {
 
   return (
     <div>
-      {cat.map (c => <li>{cat.genero}</li>)}
+      {cat.map( c => <CatCard key={c.id} {...c}/> )}
     </div>
   )
 }
