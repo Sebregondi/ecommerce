@@ -23,18 +23,20 @@ const ItemDetail = () => {
     }
 
     return (
-        <div className="mt-1 card outline outline-2 outline-red-400 items-center w-96 bg-base-100 shadow-xl">
-            <figure className="w-2/3 px-5">
-                <img src={item.img} alt={item.nombre} className="mt-5 items-center rounded-xl outline outline-1 outline-red-400" />
-            </figure>
-            <div className="card-body items-center text-center">
+        <div className="card lg:card-side bg-base-100 shadow-xl">
+            <figure className="max-w-4xl px-5"><img src={item.img} alt={item.nombre}/></figure>
+            <div className="card-body">
                 <h2 className="card-title">${item.precio}</h2>
+                <div>
                 <p>Título: {item.nombre}</p>
                 <p>Autor: {item.autor}</p>
                 <p>Género: {item.genero}</p>
                 <p>Págs.: {item.pags}</p>
-                <div className="card-actions">
-                    <button className="btn btn-error">¡Comprar!</button>
+                </div>
+                <p>Descripción: {item.sintesis}</p>
+                
+                <div className="card-actions justify-end">
+                    <button className="btn btn-primary">Add to cart</button>
                 </div>
             </div>
         </div>
