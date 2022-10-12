@@ -27,14 +27,13 @@ const ItemDetail = () => {
             <figure className="max-w-4xl px-5"><img src={item.img} alt={item.nombre}/></figure>
             <div className="card-body">
                 <h2 className="card-title">${item.precio}</h2>
-                <div>
-                <p>Título: {item.nombre}</p>
-                <p>Autor: {item.autor}</p>
-                <p>Género: {item.genero}</p>
-                <p>Págs.: {item.pags}</p>
-                </div>
+                    <div>
+                        <p>Título: {item.nombre}</p>
+                        <p>Autor: {item.autor}</p>
+                        <p>Género: {item.genero}</p>
+                        <p>Págs.: {item.pags}</p>
+                    </div>
                 <p>Descripción: {item.sintesis}</p>
-                
                 <div className="card-actions justify-end">
                     <button className="btn btn-primary">Add to cart</button>
                 </div>
