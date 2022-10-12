@@ -34,7 +34,7 @@ function App() {
         <Route path='/item/:id' element={<ItemDetail />} />
         <Route path='/category/:id' element={<ItemList />} />
         <Route path='/count' element={<ItemCount />} />
-        <Route path='/cat/:id' element={<Categories />} />
+        <Route path='/categories' element={<Categories />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

@@ -1,32 +1,32 @@
-import React, { useEffect, useState } from 'react'
-import CatCard from './CatCard'
-import { products } from './products'
+// import React, { useEffect, useState } from 'react'
+// import CatCard from './CatCard'
+// import { products } from './products'
 
-const CatList = () => {
+// const CatList = () => {
 
-    const [cat, setCat] = useState([])
+//     const [cat, setCat] = useState([])
 
-useEffect(() => {
-    getCategories().then (response => {
-        setCat(response)
-    })
-}, [])
+// useEffect(() => {
+//     getCategories().then (response => {
+//         setCat(response)
+//     })
+// }, [])
 
-const getCategories = () => {
-    return new Promise (resolve => {
-        setTimeout(() => {
-            resolve (products)
-        }, 1000);
-    })
-}
+// const getCategories = () => {
+//     return new Promise (resolve => {
+//         setTimeout(() => {
+//             resolve (products)
+//         }, 1000);
+//     })
+// }
 
-  return (
-    <>
-        <div>CATEGORÍAS</div>
-        {cat.map( c => <CatCard key={c.id} {...c}/> )}
-    </>
+//   return (
+//     <>
+//         <div>CATEGORÍAS</div>
+//         {cat.map( c => <CatCard key={c.id} {...c}/> )}
+//     </>
     
-  )
-}
+//   )
+// }
 
-export default CatList
+// export default CatList

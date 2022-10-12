@@ -12,7 +12,7 @@ const ItemCard = ({id, nombre, autor, genero, pags}) => {
           </Link>
           <div>Páginas: {pags}</div>
         </div>
-    </Link>
+      </Link>
   )
 }
 

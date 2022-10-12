@@ -9,7 +9,7 @@ const NavBar = () => {
                 <Link to='/' className="btn btn-ghost normal-case font-serif text-3xl">Dobby's Books</Link>
             </div>
             <div className="flex-1">
-                <Link to='/cat' className="btn btn-ghost normal-case font-serif text-3xl">CATEGORIAS</Link>
+                <Link to='/categories' className="btn btn-ghost normal-case font-serif text-3xl">Categorías</Link>
             </div>
             <div className="dropdown dropdown-left">
                 <label tabIndex={0} className="btn btn-sm m-1 bg-error">Menú</label>
