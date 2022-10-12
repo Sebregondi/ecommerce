@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import CatCard from './CatCard'
 import { products } from './products'
-import { CatDetail } from "./CatDetail";
-
-
 
 const CatList = () => {
 
@@ -25,7 +23,7 @@ const getCategories = () => {
   return (
     <>
         <div>CATEGORÍAS</div>
-        {cat.map( c => <CatDetail key={c.id} {...c}/> )}
+        {cat.map( c => <CatCard key={c.id} {...c}/> )}
     </>
     
   )
