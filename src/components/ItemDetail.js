@@ -30,7 +30,7 @@ const ItemDetail = () => {
                 <div>
                 <p>Título: {item.nombre}</p>
                 <p>Autor: {item.autor}</p>
-                <p>Género: {item.genero}</p>
+                <p>Género: {item.categoryId}</p>
                 <p>Págs.: {item.pags}</p>
                 </div>
                 <p>Descripción: {item.sintesis}</p>
