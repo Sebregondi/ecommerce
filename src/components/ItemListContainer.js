@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { products } from './products'
+import { collection, getDocs, getFirestore } from "firebase/firestore"
 
 const ItemListContainer = () => {
 
   const [items, setItems] = useState([])
 
   useEffect(() => {
-    getProducts().then(response => {
-      setItems(response)
-    })
+    getItems()
   }, [])
-
-  const getProducts = () => {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve(products)
-      }, 2000);
+  
+  const getItems = () => {
+    const db = getFirestore()
+    const collectionRef = collection(db, 'items')
+    getDocs (collectionRef).then (snapshot => {
+      const data = snapshot.docs.map ( e => ({id: e.id, ...e.data()}))
+      setItems(data)
     })
   }
 
-  return (
+return (
     <div>
         {items.map(i =>
             <div key={i.id} className="mt-5 ml-5 outline outline-2 outline-red-400 inline-flex card card-compact w-1/6 bg-base-100 shadow-xl">
