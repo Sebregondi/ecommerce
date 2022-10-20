@@ -69,7 +69,7 @@ const products = [
     sintesis: 'Publicado por primera vez en 1985, un año antes de su muerte, Los conjurados incluye cuarenta y cuatro poemas y prosas poéticas que Borges asegura tuvieron su origen en sueños. El que da título al libro profetiza la concordia y hermandad entre los hombres, tal vez su último deseo.',
     },
 
-    {id: 9,
+    {id: 8,
     nombre: "La moneda de hierro",
     autor: "Jorge Luis Borges",
     pags: "72 páginas",
@@ -79,7 +79,7 @@ const products = [
     sintesis: 'Publicado por primera vez en 1976, ya instalada la dictadura militar en la Argentina, La moneda de hierro incluye treinta y seis poemas, sonetos en su mayoría, que revelan un nuevo giro de impronta onírica en la poesía de un Borges que advierte será juzgado por la imagen que se tiene de él antes que por el contenido de su libro.',
     },
 
-    {id: 10,
+    {id: 9,
     nombre: "Siete noches",
     autor: "Jorge Luis Borges",
     pags: "192 páginas",
@@ -89,7 +89,7 @@ const products = [
     sintesis: 'Siete memorables conferencias dictadas por Borges en el Teatro Coliseo de Buenos Aires durante los meses de junio, julio y agosto de 1977.'
     },
 
-    {id: 11,
+    {id: 10,
     nombre: "Borges: el misterio esencial",
     autor: "Jorge Luis Borges",
     pags: "320 páginas",
@@ -99,7 +99,7 @@ const products = [
     sintesis: 'Ya en sus ochenta años y convertido en una personalidad de enorme notoriedad pública a nivel mundial, Borges emprende un viaje a diversas universidades de los Estados Unidos en las que mantiene conversaciones entrañables sobre sí, sus mundos y sus obras, con académicos, periodistas y público general',
     },
 
-    {id: 12,
+    {id: 11,
     nombre: "El tango",
     autor: "Jorge Luis Borges",
     pags: "160 páginas",
@@ -109,7 +109,7 @@ const products = [
     sintesis: 'Cincuenta años después de pronunciadas, cuatro conferencias inéditas de Borges sobre el tango que abordan, a puro ingenio, desde sus orígenes en los arrabales de la Buenos Aires de antaño, sus raíces en la milonga y sus personajes (compadritos, "niños bien", mujeres de mala vida), hasta la figura de Carlos Gardel, el espíritu del "tango llorón", y el lugar del gaucho y las "casas malas" en su lírica.',
     },
 
-    {id: 13,
+    {id: 12,
     nombre: "Alias",
     autor: "Jorge Luis Borges y Adolfo Bioy Casares",
     pags: "480 páginas",
@@ -118,7 +118,7 @@ const products = [
     img: "/img/Alias.jpg",
     sintesis: 'Este volumen reúne la obra completa en colaboración que Borges y Bioy Casares publicaron con sus nombres propios y con los alias H. Bustos Domecq y B. Suárez Lynch.'},
 
-    {id: 14,
+    {id: 13,
     nombre: "Los mejores cuentos policiales",
     autor: "Jorge Luis Borges y Adolfo Bioy Casares",
     pags: "504 páginas",
@@ -127,7 +127,7 @@ const products = [
     img: "/img/MejoresPoliciales.jpg",
     sintesis: 'Jorge Luis Borges y Adolfo Bioy Casares, amigos por más de cincuenta años, compartieron a lo largo de sus vidas una pasión: el género policial. Originalmente publicada en dos volúmenes, la selección de treinta y un textos que reunieron en Los mejores cuentos policiales celebra su amistad y su gusto por el género.'},
 
-    {id: 15,
+    {id: 14,
         nombre: "Qué es el budismo",
         autor: "Jorge Luis Borges y Alicia Jurado",
         pags: "128 páginas",
