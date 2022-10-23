@@ -19,7 +19,7 @@ const ItemDetail = () => {
     }
 
   return (
-    <div>ItemDetail</div>
+    <div>ItemDetail dsajkaskdjkjasd</div>
   )
 }
 
