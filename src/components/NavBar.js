@@ -6,7 +6,10 @@ const NavBar = () => {
     return (
         <div className="navbar bg-error">
             <div className="flex-1">
-                <Link to='/' className="btn btn-ghost normal-case font-serif text-3xl">Dobby's Books</Link>
+                <Link to='/' className="btn btn-ghost normal-case font-serif text-3xl">Georgie's Books</Link>
+            </div>
+            <div className="flex-1">
+                <Link to='/cart' className="btn btn-ghost normal-case font-serif text-3xl">Cart</Link>
             </div>
             <div className="dropdown dropdown-left">
                 <label tabIndex={0} className="btn btn-sm m-1 bg-error">Menu</label>
@@ -16,8 +19,8 @@ const NavBar = () => {
                     <li><Link to={'/count'}>ItemCount</Link></li>
                 </ul>
             </div>
-            <CartWidget /> 
-        </div>
+              <CartWidget />
+            </div>
     )
 }
 
