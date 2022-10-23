@@ -16,7 +16,7 @@ const NavBar = () => {
                     <li><Link to={'/count'}>ItemCount</Link></li>
                 </ul>
             </div>
-              <CartWidget />
+                <CartWidget />
             </div>
     )
 }

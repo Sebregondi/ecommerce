@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import ItemCard from './ItemCard'
+import Loader from './Loader'
 
 const ItemListContainer = () => {
 
@@ -23,7 +24,7 @@ const ItemListContainer = () => {
 
 return (
     <div>
-      { loading ? <h1 className='text-xl font-bold'>Cargando...</h1>
+      { loading ? <Loader/> 
       :
       items.map(i => <ItemCard key={i.id} {...i} />)}
     </div>)

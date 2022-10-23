@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { collection, doc, getDoc, getFirestore } from "firebase/firestore"
 import { useParams } from 'react-router-dom'
 import { useCart } from './context/CartContext'
+import Loader from './Loader'
 
 const ItemDetail = () => {
 
@@ -29,7 +30,7 @@ const ItemDetail = () => {
       addtoCart(product)
     }
 
-    return ( loading ? <h1 className='text-xl font-bold'>Cargando...</h1> 
+    return ( loading ? <Loader/> 
     :
           <div className="card lg:card-side bg-base-100 shadow-xl">
               <figure className="max-w-4xl px-5"><img src={product.img} alt={product.title} width={300}/></figure>
@@ -42,7 +43,7 @@ const ItemDetail = () => {
                   <p>Descripción: {product.description}</p>
                   
                   <div className="card-actions justify-end">
-                      <button onClick={addHandler} className="btn btn-primary">Agregar al carrito</button>
+                      <button onClick={addHandler} className="btn bg-error shadow">Agregar al carrito</button>
                   </div>
               </div>
           </div>

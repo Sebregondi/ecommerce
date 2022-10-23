@@ -21,7 +21,7 @@ const CartWidget = () => {
                     <span className="text-info text-black">Subtotal: $0</span>
                     <div className="card-actions">
                         <Link to={'/cart'}>
-                            <button className="btn btn-block bg-error">View cart</button>
+                            <button className="btn btn-block bg-error">Ir al carrito</button>
                         </Link>
                     </div>
                 </div>
