@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { products } from './products'
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 
 const ItemListContainer = () => {
 
   const [items, setItems] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     getItems()
@@ -17,13 +17,16 @@ const ItemListContainer = () => {
     getDocs (collectionRef).then (snapshot => {
       const data = snapshot.docs.map ( e => ({id: e.id, ...e.data()}))
       setItems(data)
+      setLoading (false)
     })
   }
 
 return (
     <div>
-        {items.map(i =>
-            <div key={i.id} className="mt-5 ml-5 outline outline-2 outline-red-400 inline-flex card card-compact w-1/6 bg-base-100 shadow-xl">
+      { loading ? <h1 className='text-xl font-bold'>Cargando...</h1>
+      :
+      items.map(i =>
+          <div key={i.id} className="mt-5 ml-5 outline outline-2 outline-red-400 inline-flex card card-compact w-1/6 bg-base-100 shadow-xl">
             <figure><img src={i.img} alt={i.nombre} /></figure>
             <div className="card-body">
               <div className="card-actions justify-end">
