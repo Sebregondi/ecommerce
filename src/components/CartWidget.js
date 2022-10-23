@@ -20,7 +20,7 @@ const CartWidget = () => {
                     <span className="font-bold text-lg">{counter} Items</span>
                     <span className="text-info text-black">Subtotal: $0</span>
                     <div className="card-actions">
-                        <Link to>
+                        <Link to={'/cart'}>
                             <button className="btn btn-block bg-error">View cart</button>
                         </Link>
                     </div>
