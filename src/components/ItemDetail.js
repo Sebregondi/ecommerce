@@ -6,7 +6,7 @@ import Loader from './Loader'
 
 const ItemDetail = () => {
 
-  const { id } =useParams()
+  const { id } = useParams()
 
   const [product, setProduct] = useState({})
   const [loading, setLoading] = useState(true)

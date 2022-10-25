@@ -1,30 +1,27 @@
+import { collection, getDocs, getFirestore } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
-import ItemCard from './ItemCard'
-import { products } from './products'
 
 const ItemList = () => {
 
-  const [items, setItems] = useState([])
+  const [list, setList] = useState([])
 
   useEffect(() => {
-    getProducts().then(response => {
-      setItems(response)
-    })
+    getItemList()
   }, [])
-
-  const getProducts = () => {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve(products)
-      }, 2000);
+  
+  const getItemList = () => {
+    const db = getFirestore()
+    const collectionRef = collection (db, 'items')
+    getDocs(collectionRef).then (snapshot =>{
+      const data = snapshot.docs.map (e => ({id: e.id, ...e.data()}))
+      setList(data)
     })
   }
 
   return (
-    <>
-      <div className='m-8'><h1 className='text-xl font-bold'>Listado de libros</h1></div>
-      {items.map(i => <ItemCard key={i.id} {...i} />)}
-    </>
+    <div>
+      {list.map(l => <li key={l.id} {...l}>{l.title}</li>)}
+    </div>
   )
 }
 
