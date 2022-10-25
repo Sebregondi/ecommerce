@@ -20,7 +20,8 @@ const ItemList = () => {
 
   return (
     <div>
-      {list.map(l => <li key={l.id} {...l}>{l.title}</li>)}
+      <h1 className='m-3 text-3xl'>Listado de títulos</h1>
+      {list.map(l => <li className='m-3' key={l.id} {...l}>{l.title}</li>)}
     </div>
   )
 }
