@@ -35,7 +35,6 @@ const getCategory = () => {
     console.log(data);
   })
 }
-}
 
   return (
   <>
@@ -43,7 +42,7 @@ const getCategory = () => {
       <h1 className='m-3 text-3xl'>Nuestro catálogo</h1>
     </div>
     {list.map(l => <div className='m-3' key={l.id} {...l}>{l.title}, 
-    <Link onClick={categoryHandler} to={`/category/:categoryId`}>{l.categoryId}</Link>
+    <Link to={`/category/:categoryId`}>{l.categoryId}</Link>
     </div>)}
   </>
 )
