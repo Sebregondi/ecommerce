@@ -28,8 +28,8 @@ function App() {
       <Routes>
         <Route path='/' element={<ItemListContainer/>} />
         <Route path='/category/:categoyId' element={<ItemListContainer/>} />
-        <Route path='/cart' element={<Cart/>} />
         <Route path='/detail/:detailId' element={<ItemDetailContainer/>} />
+        <Route path='/cart' element={<Cart/>} />
         <Route path='*' element={<PageNotFound/>} />
       </Routes>
     </BrowserRouter>

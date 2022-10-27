@@ -2,9 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import ItemCard from './ItemCard'
 import Loader from './Loader'
+import { useParams } from 'react-router-dom'
+
 
 const ItemListContainer = () => {
 
+  const { categoryId } = useParams()
+  
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
 

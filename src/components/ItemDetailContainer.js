@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
 
-    const { categoryId } = useParams()
+    const { detailId } = useParams()
 
     const [list, setList] = useState([])
     const [category, setCategory] = useState([])
@@ -20,19 +20,6 @@ const ItemDetailContainer = () => {
         getDocs(collectionRef).then(snapshot => {
             const data = snapshot.docs.map(e => ({ id: e.id, ...e.data() }))
             setList(data)
-        })
-    }
-
-    // Aquí lógica para traer productos por categoría
-
-    const getCategory = () => {
-        const db = getFirestore()
-        const categoryRef = collection(db, 'items')
-        const q = query(categoryRef, where('categoryId', '==', 'Cuento'))
-        getDocs(q).then(snapshot => {
-            const data = snapshot.docs.map(e => ({ id: e.id, ...e.data() }))
-            setCategory(data)
-            console.log(data);
         })
     }
 
