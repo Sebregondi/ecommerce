@@ -1,13 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ItemCount from './components/ItemCount';
-import ItemList from './components/ItemList';
-import ItemDetail from './components/ItemDetail';
 import ItemListContainer from './components/ItemListContainer';
 import { CartContextProvider } from './components/context/CartContext';
 import Cart from './components/Cart';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function PageNotFound() {
   return (
@@ -30,11 +27,9 @@ function App() {
       <NavBar/>
       <Routes>
         <Route path='/' element={<ItemListContainer/>} />
-        <Route path='/category/:id' element={<ItemList/>} />
-        <Route path='/category/category/:id' element={<ItemList/>} />
-        <Route path='/item/:id' element={<ItemDetail/>} />
+        <Route path='/category/:categoyId' element={<ItemListContainer/>} />
         <Route path='/cart' element={<Cart/>} />
-        <Route path='/count' element={<ItemCount/>} />
+        <Route path='/detail/:detailId' element={<ItemDetailContainer/>} />
         <Route path='*' element={<PageNotFound/>} />
       </Routes>
     </BrowserRouter>
