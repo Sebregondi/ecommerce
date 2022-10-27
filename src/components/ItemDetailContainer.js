@@ -5,14 +5,13 @@ import { useParams } from 'react-router-dom';
 
 export const ItemDetailContainer = () => {
 
+    const [data, setData] = useState({})
     const { detailId } = useParams()
-    const [data, setData] = useState()
 
     useEffect(() => {
-        const db = getFirestore()
-        const docRef = doc(db, 'items', '1LLjjMGoWuaTqMSCTA7c')
-        getDoc(docRef)
-            .then (res => setData({ id: res.id, ...res.data()}))
+    
+        // getData.then(res => setData(res.find(item => item.id === Number(detailId))))
+    
     }, [])
 
     return (
