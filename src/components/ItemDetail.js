@@ -6,7 +6,7 @@ import { useCartContext } from "../context/CartContext";
 const ItemDetail = ({ data }) => {
 
   const [addToCart, setAddToCart] = useState(false)
-  const {addProduct} = useCartContext()
+  const { addProduct } = useCartContext()
 
   const onAdd = (quantity) => {
     setAddToCart(true)
@@ -24,17 +24,13 @@ const ItemDetail = ({ data }) => {
         </div>
         <p>Descripción: {data.description}</p>
 
-      <div className="card-actions justify-center">
-      {
-        addToCart 
-        ? <Link to='/cart'>Terminar compra</Link>
-        : <ItemCounter initial={1} stock={5} onAdd={onAdd} />
-      }
-
-        <div className="card-actions justify-end">
-          <button disabled={stock <= 0} onClick={() => onAdd(count)} className="btn bg-error shadow">Agregar al carrito</button>
+        <div className="card-actions justify-center">
+          {
+            addToCart
+              ? <Link to='/cart'>Terminar compra</Link>
+              : <ItemCounter initial={1} stock={5} onAdd={onAdd} />
+          }
         </div>
-      </div>
       </div>
     </div>
   )
