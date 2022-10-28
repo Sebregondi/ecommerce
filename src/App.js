@@ -5,7 +5,8 @@ import ItemListContainer from './components/ItemListContainer';
 import Cart from './components/Cart';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Error404 from './components/Error404';
-import CartProvider from './components/context/CartContext';
+import CartProvider from './context/CartContext';
+
 
 function App() {
 
