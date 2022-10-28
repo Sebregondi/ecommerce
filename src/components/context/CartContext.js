@@ -1,43 +1,35 @@
-import { createContext, useContext } from "react";
-import useLocalStorage from "../../hooks/useLocalStorage";
+import { Children, createContext, useContext } from "react";
+// import useLocalStorage from "../../hooks/useLocalStorage";
 
+const CartContext = createContext([])
 
-const CartContext = createContext({
-    products: [],
-    addtoCart: () => {},
-    clearCart: () => {},
-    counter: 0,
+export const useCartContext = () => useContext(CartContext)
 
-})
+const CartProvider = ( {children} ) => {
 
-const useCart = () => {
-    return useContext(CartContext)
+    const [cart, setCart] = useState([])
+
+    const clearCart = () => setCart([])
+
+    const isInCart = (id) => cart.find(product => product.id === id) ? true : false
+    
+    const removeProduct = (id) => setCart(cart.filter(product => product.id !== id))
+
+    const addProduct = () => {}
+
+    return (
+        <CartContext.Provider value={{
+            clearCart,
+            isInCart,
+            removeProduct
+        }}>
+            {children}
+        </CartContext.Provider>
+    )
 }
 
-const CartContextProvider = ( {children} ) => {
+export default CartProvider
 
-    const [products, setProducts] = useLocalStorage('products',[])
 
-    const addtoCart = ( product ) => {
-        setProducts ( products => [...products, product] )
-    }
 
-    const clearCart = () => {
-        setProducts([])
-    }
-
-    const context = {
-        products: products,
-        addtoCart: addtoCart,
-        clearCart: clearCart,
-        counter: products.length
-    }
-
-  return (
-    <CartContext.Provider value={context}>
-        {children}
-    </CartContext.Provider>
-  )
-}
-
-export { useCart, CartContextProvider }
+    // const [products, setProducts] = useLocalStorage('products',[])
