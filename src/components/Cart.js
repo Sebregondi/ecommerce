@@ -1,20 +1,25 @@
 import React from 'react'
-import { useCart } from './context/CartContext'
+import { Link } from 'react-router-dom'
+import { useCartContext } from '../context/CartContext'
+import ItemCart from './ItemCart'
 
 const Cart = () => {
+    const { cart, totalPrice } = useCartContext()
 
-    const { products, clearCart, id } = useCart()
-
-    const clearHandler = () => {
-        clearCart()
+    if (cart.length === 0) {
+        return (
+            <>
+            <p>No hay productos en el carrito</p>
+            <Link to='/'>Hacer compras</Link>
+            </>
+        )
     }
 
     return (
-        <div>
-            <div>Carrito</div>
-            {products.map(p => <li key={p.id}>{p.title} </li>)}
-            <button className='btn' onClick={clearHandler}>Limpiar carrito</button>
-        </div>
+        <>
+        {cart.map(product => <ItemCart key={product.id} product={product} />)}
+        <p>Precio total: ${totalPrice()}</p>
+        </>
     )
 }
 

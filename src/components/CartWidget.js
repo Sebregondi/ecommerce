@@ -1,13 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useCart } from './context/CartContext'
+import { useCartContext } from '../context/CartContext'
 
 const CartWidget = () => {
 
-    const { counter } = useCart()
+    const { totalProducts } = useCartContext()
 
     return (
-    <div className="flex-none">
+
+    )
+}
+
+export default CartWidget
+
+{/* <div className="flex-none">
         <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
                 <div className="indicator">
@@ -27,8 +33,4 @@ const CartWidget = () => {
                 </div>
             </div>
         </div>
-    </div>
-    )
-}
-
-export default CartWidget
+    </div> */}
