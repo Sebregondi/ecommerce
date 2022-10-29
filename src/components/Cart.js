@@ -40,10 +40,10 @@ const Cart = () => {
 
     if (cart.length === 0) {
         return (
-            <>
-                <p>No hay productos en el carrito</p>
-                <Link to='/'><button className='btn btn-outline btn-error'>Hacer compras</button></Link>
-            </>
+            <div className='justify-center'>
+                <h1 className='text-5xl text-center m-20'>No hay productos en el carrito</h1>
+                <Link to='/'><button className='justify-center btn btn-outline btn-error'>Ir de compras</button></Link>
+            </div>
         )
     }
 
