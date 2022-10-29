@@ -4,7 +4,7 @@ import { useCartContext } from '../context/CartContext'
 
 const CartWidget = () => {
 
-    const { totalProducts, totalPrice } = useCartContext()
+    const { totalProducts, totalPrice, clearCart } = useCartContext()
 
     return (
         <div className="flex-none">
@@ -21,6 +21,7 @@ const CartWidget = () => {
                         <span className="text-info text-black">Subtotal: ${totalPrice()}</span>
                         <div className="card-actions">
                             <Link to={'/cart'}>
+                            <button className="btn btn-block bg-error" onClick={ () => clearCart() }>Vaciar carrito</button>
                                 <button className="btn btn-block bg-error">Ir al carrito</button>
                             </Link>
                         </div>
