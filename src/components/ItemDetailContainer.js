@@ -21,13 +21,3 @@ export const ItemDetailContainer = () => {
 }
 
 export default ItemDetailContainer
-
-
-{/* <>
-        //     <div>
-                <h1 className='m-3 text-3xl'>Nuestro catálogo</h1>
-        //     </div>
-        //     {list.map(l => <div className='m-3' key={l.id} {...l}>{l.title},
-        //         <Link to={`/category/:categoryId`}>{l.categoryId}</Link>
-        //     </div>)}
-        // </> */}

@@ -28,7 +28,7 @@ const ItemDetail = ({ data }) => {
           {
             addToCart
               ? <Link to='/cart'>Terminar compra</Link>
-              : <ItemCounter initial={1} stock={5} onAdd={onAdd} />
+              : <ItemCounter initial={1} stock={data.stock} onAdd={onAdd} />
           }
         </div>
       </div>

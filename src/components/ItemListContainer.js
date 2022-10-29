@@ -14,28 +14,21 @@ const ItemListContainer = () => {
     const db = getFirestore()
     const collectionRef = collection(db, 'items')
     if (categoryId) {
-      const collectionFilter = query (collectionRef, where('category', '==', categoryId ))
-      getDocs (collectionFilter)
-        .then( res => setData( res.docs.map( product => ({ id: product.id, ...product.data() }))))
+      const collectionFilter = query(collectionRef, where('category', '==', categoryId))
+      getDocs(collectionFilter)
+        .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data() }))))
     } else {
       getDocs(collectionRef)
-        .then( res => setData( res.docs.map( product => ({ id: product.id, ...product.data() }))))
+        .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data() }))))
     }
   }, [categoryId])
-  
+
 
   return (
     <>
-    <ItemList data={data} />
+      <ItemList data={data} />
     </>
   )
 }
 
 export default ItemListContainer
-
-
-{/* <div>
-      { loading ? <Loader/> 
-      :
-      items.map(i => <ItemCard key={i.id} {...i} />)}
-    </div> */}
