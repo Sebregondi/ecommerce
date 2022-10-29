@@ -8,7 +8,7 @@ export const ItemCard = ({ info }) => {
             <div className="card-body">
                 <div className="card-actions justify-end">
                 <Link to={`/detail/${info.id}`}>
-                    <button className="btn btn-outline btn-error">+ info</button>
+                    <button className="btn btn-outline btn-error">Ir al detalle</button>
                 </Link>
                 </div>
             </div>

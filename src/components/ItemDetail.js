@@ -27,7 +27,7 @@ const ItemDetail = ({ data }) => {
         <div className="card-actions justify-center">
           {
             addToCart
-              ? <Link to='/cart'>Terminar compra</Link>
+              ? <Link to='/cart'><button className="btn btn-outline btn-error">Terminar compra</button></Link>
               : <ItemCounter initial={1} stock={data.stock} onAdd={onAdd} />
           }
         </div>
