@@ -21,14 +21,13 @@ function App() {
         <NavBar/>
         <Routes>
           <Route path='/' element={<ItemListContainer/>} />
-          <Route path='/category/categoryId' element={<ItemListContainer/>} />
+          <Route path='/category/:categId' element={<ItemListContainer/>} />
           <Route path='/detail/:detailId' element={<ItemDetailContainer/>} />
           <Route path='/cart' element={<Cart/>} />
           <Route path='*' element={<Error404/>} />
         </Routes>
       </CartProvider>
     </BrowserRouter>
-  
   );
 }
 
