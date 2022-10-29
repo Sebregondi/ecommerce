@@ -1,14 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../context/CartContext'
 import ItemCart from './ItemCart'
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 
+export const UserForm = ({ setUser }) => {
+
+    const updateUser = (event) => {
+        setUser( user => ({ ...user, [event.target.name]: event.target.value }))
+        console.log(event.target.value);
+    }
+
+    return (
+        <div className='m-10'>
+            <div className='m-3'>Nombre: <input onChange={updateUser} name='name' type='text' className='border boder-indigo-800' /> </div>
+            <div className='m-3'>Teléfono: <input onChange={updateUser} name='phone' type='text' className='border boder-indigo-800' /> </div>
+            <div className='m-3'>Email: <input onChange={updateUser} name='email' type='text' className='border boder-indigo-800' /> </div>
+        </div>
+    )
+}
+
 const Cart = () => {
     const { cart, totalPrice, clearCart } = useCartContext()
+    const [user, setUser] = useState({})
 
     const putOrder = () => {
-        const user = { name: 'Esteban', phone: '1124539823', email: 'esteban@esteban.com' }
         const order = {
             buyer: user,
             items: cart.map(product => ({ id: product.id, title: product.title, price: product.price, quantity: product.quantity })),
@@ -34,9 +50,12 @@ const Cart = () => {
     return (
         <>
             {cart.map(product => <ItemCart key={product.id} product={product} />)}
+
+            <UserForm setUser={setUser} />
+
             <p>Precio total: ${totalPrice()}</p>
-            <button className="btn" onClick={ () => clearCart() }>Vaciar carrito</button>
-            <button className='btn' onClick={putOrder}>Emitir orden de compra</button>
+            <button className="btn" onClick={() => clearCart()}>Vaciar carrito</button>
+            <button className='btn' onClick={putOrder}>Finalizar compra</button>
         </>
     )
 }
