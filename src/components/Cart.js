@@ -14,8 +14,8 @@ export const UserForm = ({ setUser }) => {
     return (
         <div className='m-10'>
             <div className='m-3'>Nombre: <input onChange={updateUser} name='name' type='text' className='border boder-indigo-800' /> </div>
-            <div className='m-3'>Teléfono: <input onChange={updateUser} name='phone' type='text' className='border boder-indigo-800' /> </div>
-            <div className='m-3'>Email: <input onChange={updateUser} name='email' type='text' className='border boder-indigo-800' /> </div>
+            <div className='m-3'>Teléfono: <input onChange={updateUser} name='phone' type='tel' className='border boder-indigo-800' /> </div>
+            <div className='m-3'>Email: <input onChange={updateUser} name='email' type='email' className='border boder-indigo-800' /> </div>
         </div>
     )
 }
